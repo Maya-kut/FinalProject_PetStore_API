@@ -54,11 +54,11 @@ public class PetApiTest extends TestBase {
     void findByIdTest() {
         given(Specifications.requestSpec)
                 .when()
-                .get("/pet/31072025")
+                .get("/pet/9223372036854770000")
                 .then()
                 .spec(Specifications.responseSpec(200))
-                .body("id", is(31072025))
-                .body("name", is("cat"));
+                .body("id", is(9223372036854770000L))
+                .body("name", is("doggie"));
     }
 
     @Test

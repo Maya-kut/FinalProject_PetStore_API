@@ -44,10 +44,10 @@ public class UserApiTest extends TestBase {
     void getUserTest() {
         given(Specifications.requestSpec)
                 .when()
-                .get("user/Burl")
+                .get("user/Dwight")
                 .then()
                 .spec(Specifications.responseSpec(200))
-                .body("id", is(8078))
+                .body("id", is(3793))
                 .body("firstName", is("Burl"));
     }
 
