@@ -1,5 +1,5 @@
-Request method:	POST
-1Request URI:	https://petstore.swagger.io/v2/user
+Request method:	GET
+DRequest URI:	https://petstore.swagger.io/v2/pet/9223372036854770000
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -9,19 +9,9 @@
 "				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:
-{
-    "id": 3793,
-    "userName": "Dwight",
-    "firstName": "Dwight",
-    "lastName": "Turcotte",
-)    "email": "rufus.schmeler@gmail.com",
-    "password": "fct5pn9ux",
-    "phone": "130-366-0599",
-    "userStatus": -210021222
-}
+Body:			<none>
 HTTP/1.1 200 OK
-$Date: Mon, 11 Aug 2025 16:31:11 GMT
+$Date: Mon, 11 Aug 2025 16:35:20 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -31,7 +21,22 @@
 Server: Jetty(9.2.9.v20150224)
 
 {
-    "code": 200,
-    "type": "unknown",
-    "message": "3793"
+    "id": 9223372036854770000,
+    "category": {
+        "id": 0,
+        "name": "string"
+    },
+    "name": "doggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 0,
+            "name": "string"
+
+        }
+    ],
+    "status": "string"
 }
