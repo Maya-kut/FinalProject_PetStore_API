@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import models.UserModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -12,6 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.is;
 import static testData.UserData.*;
 
+@Owner("Maiya_Lys")
 @Tag("api")
 public class UserApiTest extends TestBase {
 

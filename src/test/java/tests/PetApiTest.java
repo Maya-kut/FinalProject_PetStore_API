@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import models.PetModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -11,6 +12,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.hasSize;
 
+@Owner("Maiya_Lys")
 @Tag("api")
 public class PetApiTest extends TestBase {
     @Test
