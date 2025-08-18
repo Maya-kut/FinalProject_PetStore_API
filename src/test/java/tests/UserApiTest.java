@@ -22,7 +22,7 @@ public class UserApiTest extends TestBase {
     void createUserTest() {
         UserModel createUserData = new UserModel();
         createUserData.setId(Math.toIntExact(id));
-        createUserData.setUserName(userName);
+        createUserData.setUserName(userNickName);
         createUserData.setFirstName(userName);
         createUserData.setLastName(userSurname);
         createUserData.setEmail(userEmail);

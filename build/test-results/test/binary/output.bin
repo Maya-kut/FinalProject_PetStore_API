@@ -1,5 +1,5 @@
-Request method:	GET
-DRequest URI:	https://petstore.swagger.io/v2/pet/9223372036854770000
+Request method:	POST
+1Request URI:	https://petstore.swagger.io/v2/user
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -9,9 +9,19 @@
 "				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{
+    "id": 176,
+%    "userName": "Russell Ingleaves",
+    "firstName": "Maddie",
+    "lastName": "Runolfsson",
+,    "email": "verline.pfeffer@hotmail.com",
+    "password": "c6ebboa4u",
+    "phone": "792.121.1936",
+    "userStatus": -1057432624
+}
 HTTP/1.1 200 OK
-$Date: Mon, 11 Aug 2025 16:35:20 GMT
+$Date: Mon, 18 Aug 2025 19:39:24 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -21,22 +31,7 @@
 Server: Jetty(9.2.9.v20150224)
 
 {
-    "id": 9223372036854770000,
-    "category": {
-        "id": 0,
-        "name": "string"
-    },
-    "name": "doggie",
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-
-        {
-            "id": 0,
-            "name": "string"
-
-        }
-    ],
-    "status": "string"
+    "code": 200,
+    "type": "unknown",
+    "message": "176"
 }
