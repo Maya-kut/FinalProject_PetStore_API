@@ -11,6 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.hasSize;
+import static specs.Specifications.responseSpec;
 
 @Owner("Maiya_Lys")
 @Tag("api")
@@ -23,7 +24,7 @@ public class PetApiTest extends TestBase {
                 .params("status", "sold")
                 .get("/pet/findByStatus")
                 .then()
-                .spec(Specifications.responseSpec(200))
+                .spec(responseSpec(200))
                 .body("id", hasSize(greaterThan(0)));
     }
 
@@ -35,7 +36,7 @@ public class PetApiTest extends TestBase {
                 .params("status", "available")
                 .get("/pet/findByStatus")
                 .then()
-                .spec(Specifications.responseSpec(200))
+                .spec(responseSpec(200))
                 .body("id", hasSize(greaterThan(0)));
     }
 
@@ -47,7 +48,7 @@ public class PetApiTest extends TestBase {
                 .params("status", "none")
                 .get("/pet/findByStatus")
                 .then()
-                .spec(Specifications.responseSpec(200))
+                .spec(responseSpec(200))
                 .body(is("[]"));
     }
 
@@ -58,7 +59,7 @@ public class PetApiTest extends TestBase {
                 .when()
                 .get("/pet/9223372036854770000")
                 .then()
-                .spec(Specifications.responseSpec(200))
+                .spec(responseSpec(200))
                 .body("id", is(9223372036854770000L))
                 .body("name", is("doggie"));
     }
@@ -70,7 +71,7 @@ public class PetApiTest extends TestBase {
                 .when()
                 .get("/pet/922337203685474000")
                 .then()
-                .spec(Specifications.responseSpec(404))//как правильно импортировать, чтобы работало?
+                .spec(responseSpec(404))
                 .body("type", is("error"))
                 .body("message", is("Pet not found"));
     }
@@ -87,7 +88,7 @@ public class PetApiTest extends TestBase {
                 .when()
                 .post("/pet/")
                 .then()
-                .spec(Specifications.responseSpec(200))
+                .spec(responseSpec(200))
                 .body("id", is(9223372036854740000L))
                 .body("name", is("Hercules"))
                 .body("status", is("available"));

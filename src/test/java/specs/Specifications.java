@@ -15,7 +15,7 @@ public class Specifications {
             .contentType(JSON)
             .log().all();
 
-    public static ResponseSpecification responseSpec(Integer expectedStatusCode) {
+    public static ResponseSpecification responseSpec(int expectedStatusCode) {
         return new ResponseSpecBuilder()
                 .log(ALL)
                 .expectStatusCode(expectedStatusCode)
